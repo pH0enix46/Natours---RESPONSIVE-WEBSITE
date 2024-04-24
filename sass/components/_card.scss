@@ -1,0 +1,257 @@
+.card {
+  // 3D transformations er jonno perspective use kora hoy,, for realism. ekhane high value dite hobe
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    height: 52rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 3.5rem rgba($color-black, 0.2);
+    overflow: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    // .card:hover .card__side--front
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    // .card:hover .card__side--back
+    transform: rotateY(0deg);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // sob browser e jeno kaj kore e jonno -webkit- use kora hoy
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/nat-6.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/nat-7.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      border-radius: 1.5rem;
+      box-shadow: 0 1.5rem 3.5rem rgba($color-black, 0.2);
+
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.9),
+          rgba($color-secondary-dark, 0.9)
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.9),
+          rgba($color-primary-dark, 0.9)
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.9),
+          rgba($color-tertiary-dark, 0.9)
+        );
+      }
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 0.2rem solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+
+    &--shadow1 {
+      text-shadow: 0 0.3rem 0.2rem rgba($color-secondary-dark, 0.9);
+    }
+
+    &--shadow2 {
+      text-shadow: 0 0.3rem 0.2rem rgba($color-grey-dark, 0.9);
+    }
+
+    &--shadow3 {
+      text-shadow: 0 0.3rem 0.2rem rgba($color-tertiary-dark, 0.9);
+    }
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    height: auto;
+    border-radius: 1.5rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 3.5rem rgba($color-black, 0.2);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        border-top-right-radius: 0;
+      }
+    }
+
+    &:hover &__side--front {
+      // .card:hover .card__side--front
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 700;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+      font-weight: 100;
+    }
+  }
+}

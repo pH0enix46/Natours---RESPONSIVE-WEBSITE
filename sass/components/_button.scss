@@ -1,0 +1,104 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    // mind that, only & use kora hoiche <button> er jonno. karon button e to ar link, visited, hover, active esob thake na
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.3s;
+    font-weight: 700;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    position: relative;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+
+    // change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.7rem 1.4rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(0px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    /* animation-delay: 0.75s; */
+
+    animation-fill-mode: backwards;
+    /* eta animation start houar ag dei 0% k apply kore dibe tai seta dekha jabe na, then animation start(0.75s pore) houar pore baki ta show korbe */
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: $color-primary;
+    text-decoration: none;
+    border-bottom: 2px solid $color-primary;
+    padding: 0.3rem;
+    font-size: $default-font-size;
+    font-weight: 600;
+    transition: all 0.2s;
+    border-radius: 1.2rem;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.7rem 1.4rem rgba($color-black, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+}

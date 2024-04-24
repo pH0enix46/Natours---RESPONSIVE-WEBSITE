@@ -1,0 +1,36 @@
+.feature-box {
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.5rem 3.5rem rgba($color-black, 0.2);
+  transition: all 0.3s;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  &__icon {
+    // icon font text type. tai text er moto deal korlam
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to bottom,
+      $color-yellowish,
+      $color-primary-dark
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
