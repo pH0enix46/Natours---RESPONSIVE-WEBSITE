@@ -4,7 +4,7 @@
 
 This project is based on Jonas Schmedtmann's [ADVANCED HTML-CSS & SASS(SCSS)](https://www.udemy.com/user/jonasschmedtmann/) course. You should check his course. All the credits go to my beautiful teacher Jonas Schmedtmann--
 
-## Omnifood---RESPONSIVE-WEBSITE
+## Natours---RESPONSIVE-WEBSITE
 
 ✅[View demo](https://ph0enix46.github.io/Natours---RESPONSIVE-WEBSITE/) 🐛[Bug report](https://github.com/pH0enix46/Natours---RESPONSIVE-WEBSITE/issues)
 
