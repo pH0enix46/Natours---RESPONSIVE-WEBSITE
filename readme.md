@@ -28,7 +28,11 @@ Stop dreaming, start adventuring. Book your life-changing tour today! Leave your
 
 Clone the repo
 ```
- https://github.com/pH0enix46/Natours---RESPONSIVE-WEBSITE.git
+https://github.com/pH0enix46/Natours---RESPONSIVE-WEBSITE.git
+```
+install
+```
+npm install
 ```
 ✅Enjoy! for learning 
 
