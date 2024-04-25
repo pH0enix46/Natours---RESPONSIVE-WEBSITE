@@ -9,7 +9,7 @@ This project is based on Jonas Schmedtmann's [ADVANCED HTML-CSS & SASS(SCSS)](ht
 ✅[View demo](https://ph0enix46.github.io/Natours---RESPONSIVE-WEBSITE/) 🐛[Bug report](https://github.com/pH0enix46/Natours---RESPONSIVE-WEBSITE/issues)
 
 
-## About Natours
+## About
 Join us on this life-changing journey of self-discovery and connection with the world around you. Prepare to be awestruck! This journey isn't just a trip, it's a love🧡 affair with nature waiting to blossom. 
 
 Stop dreaming, start adventuring. Book your life-changing tour today! Leave your comfort zone, discover a world beyond your wildest dreams. Adventure is calling! Are you ready?😀
